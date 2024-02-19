@@ -1,11 +1,20 @@
 <script setup lang="ts">
-import AppHeader from './layouts/header/index.vue';
 
 </script >
 
 <template>
-  <AppHeader />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+body,html {
+  width: 100%;
+  height: 100%;
+}
+</style>

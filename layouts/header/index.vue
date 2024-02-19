@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Menu from './menu.vue';
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/logo/logo.png';
 
 </script >
 
@@ -17,12 +17,16 @@ import logo from '@/assets/images/logo.png';
 
 <style scoped>
 .header {
+    position: fixed;
+    top: 0;
+    z-index: 9;
     display: flex;
     width: 100%;
     height: 70px;
     justify-content: center;
     border-bottom: 1px solid #e6e6e6;
-    position: sticky;
+    background-color: #fff;
+    /* background-color: rgba(255, 255, 255, 0.7); */
 }
 .header_content {
     display: flex;

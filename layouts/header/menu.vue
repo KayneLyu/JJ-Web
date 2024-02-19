@@ -30,13 +30,14 @@ const myRef = ref<HTMLElement | null>(null);
 const hoverRef = ref<HTMLElement | null>(null);
 const changeRoute = (index: number) => {
     myRef.value!.style['opacity'] = '1'
-    myRef.value!.style['left'] = index * 168 + 40 + 'px'
+    myRef.value!.style['left'] = index * 140 + 28 + 'px'
+    hoverRef.value!.style['opacity'] = '0'
     menuIndex.value = index
 }
 
 const mouseOver = (index: number) => {
     hoverRef.value!.style['opacity'] = '1'
-    hoverRef.value!.style['left'] = index * 168 + 40 + 'px'
+    hoverRef.value!.style['left'] = index * 140 + 28 + 'px'
 }
 
 const mouseLeave = () => {
@@ -65,15 +66,17 @@ const mouseLeave = () => {
     padding: 10px 0;
     height: 70px;
     box-sizing: border-box;
+    margin: 0 200px;
 }
 
 #nav li a {
     position: relative;
-    padding: 15px 40px;
-    font: 500 22px '优设标题黑';
+    padding: 15px 30px;
+    font: 300 20px '优设标题黑';
     border: none;
     outline: none;
-    color: rgb(70, 100, 180);
+    color: #000;
+    /* color: rgb(70, 100, 180); */
     display: inline-block;
     text-decoration: none;
     z-index: 3;
@@ -95,15 +98,15 @@ const mouseLeave = () => {
 
 .slide1 {
     opacity: 1;
-    left: 40px;
+    left: 28px;
     background-color: rgb(132, 161, 255);
     z-index: 2;
 }
 
 .slide2 {
     /* opacity: 1; */
-    /* left: 40px; */
-    background-color: rgb(134, 162, 255);
+    left: 28px;
+    background-color: rgb(129, 158, 255);
     z-index: 1;
     box-shadow: 0 0 20px #ffffffaa inset;
 }
