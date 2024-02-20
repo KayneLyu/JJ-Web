@@ -24,7 +24,7 @@ import logo from '@/assets/images/logo/logo.png';
     width: 100%;
     height: 70px;
     justify-content: center;
-    border-bottom: 1px solid #e6e6e6;
+    /* border-bottom: 1px solid #e6e6e6; */
     background-color: #fff;
     /* background-color: rgba(255, 255, 255, 0.7); */
 }

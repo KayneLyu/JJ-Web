@@ -106,7 +106,7 @@ const mouseLeave = () => {
 .slide2 {
     /* opacity: 1; */
     left: 28px;
-    background-color: rgb(129, 158, 255);
+    background-color: rgb(119, 151, 255);
     z-index: 1;
     box-shadow: 0 0 20px #ffffffaa inset;
 }
