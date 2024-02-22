@@ -18,13 +18,6 @@ import logo from '@/assets/images/logo/logo.png';
 </template>
 
 <style scoped>
-.header {
-    position: fixed;
-    width: 100%;
-    height: 70px;
-
-}
-
 .header_content {
     position: fixed;
     top: 0;
@@ -35,6 +28,8 @@ import logo from '@/assets/images/logo/logo.png';
     line-height: 70px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgb(229 229 229 / 50%);
+
     text-wrap: nowrap;
     .header_menu {
         display: inline-flex;
