@@ -2,7 +2,7 @@
 import cz6 from '@/assets/images/index/cz6.png';
 import fh1 from '@/assets/images/index/fh1.png';
 import fh2 from '@/assets/images/index/fh2.png';
-
+import Button from '@/components/button.vue';
 </script>
 
 <template>
@@ -10,9 +10,7 @@ import fh2 from '@/assets/images/index/fh2.png';
         <div class="index_title">
             <p>金久为您提供塑胶成型辅助生产设备</p>
             <div>
-                <button>
-                    了解更多 →
-                </button>
+                <Button text="了解更多 →" toRightBg="#1D1F86" />
             </div>
         </div>
         <div class="image_container">
@@ -50,43 +48,7 @@ import fh2 from '@/assets/images/index/fh2.png';
             font-size: 60px;
         }
 
-        button {
-            position: relative;
-            cursor: pointer;
-            width: 220px;
-            height: 70px;
-            border: 2px solid rgb(235, 235, 235, 0.2);
-            border-radius: 8px;
-            color: #fff;
-            font-size: 24px;
-            letter-spacing: 3px;
-            background-color: rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 0;
-                height: 100%;
-                z-index: -2;
-                border-radius: 4px;
-                transition: 0.8s;
-                // background: rgb(132, 161, 255);
-                z-index: -1;
-                background-color: #1D1F86;
-            }
-
-            &:hover {
-                z-index: 1;
-                background: transparent;
-            }
-
-            &:hover:before {
-                width: 100%;
-            }
-        }
+       
     }
 
     .image_container {

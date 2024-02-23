@@ -24,11 +24,9 @@ onMounted(() => {
     const elements = document.querySelectorAll('.observer_item')
     function callback(entries: IntersectionObserverEntry[], instance: IntersectionObserver) {
         entries.forEach( entry => {
-            
             if (entry.isIntersecting) {
                 const targetElement = entry.target;
                 const number = targetElement.getAttribute('dataIndex')!;
-                console.log('index',number);
                 sectionIndex.value = Number(number)
                 instance.unobserve(targetElement);
             }
