@@ -2,6 +2,8 @@
 import { ref } from 'vue';
 import PageFirst from "./first-section.vue";
 import PageSecond from "./second-section.vue";
+import PageThird from "./third-section.vue";
+import PageFourth from "./fourth-section.vue";
 // import Header from '@/layouts/header/index.vue';
 type IntersectionObserverCallback = (
     entries: IntersectionObserverEntry[],
@@ -23,7 +25,7 @@ onMounted(() => {
     }
     const elements = document.querySelectorAll('.observer_item')
     function callback(entries: IntersectionObserverEntry[], instance: IntersectionObserver) {
-        entries.forEach( entry => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const targetElement = entry.target;
                 const number = targetElement.getAttribute('dataIndex')!;
@@ -32,7 +34,7 @@ onMounted(() => {
             }
         })
     }
-    const observer = new IntersectionObserver(callback,options);
+    const observer = new IntersectionObserver(callback, options);
     elements.forEach(ele => {
         // ele.classList.add('opaque')
         observer.observe(ele);
@@ -44,17 +46,17 @@ onMounted(() => {
 <template>
     <div ref="scrollRef" class="container">
         <!-- <Header /> -->
-        <section class="section_index">
-            <PageFirst />
+        <section class="section_index observer_item" dataIndex=1>
+            <PageFirst :section='sectionIndex' />
         </section>
-        <section class="observer_item" dataIndex = 1>
-            <PageSecond :section = 'sectionIndex' />
+        <section class="observer_item" dataIndex=2>
+            <PageSecond :section='sectionIndex' />
         </section>
-        <section class="observer_item" dataIndex = 2>
-
+        <section class="observer_item" dataIndex=3>
+            <PageThird :section='sectionIndex' />
         </section>
-        <section class="observer_item" dataIndex = 3>
-
+        <section class="observer_item" dataIndex=4>
+            <PageFourth :section='sectionIndex' />
         </section>
         <!-- <section>
 
@@ -71,23 +73,26 @@ onMounted(() => {
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-behavior: auto;
-}
+    scrollbar-width: thin;
+    // scrollbar-color: #1D1F86;
 
-.container {
-    &::-webkit-scrollbar {
-        width: 10px;
-        // height: 12px;
-        background: #f4f4f4;
-    }
 
-    &::-webkit-scrollbar-thumb {
-        background: #8B8B8B;
-        border-radius: 6px;
 
-        &:hover {
-            background: #6eccff;
-        }
-    }
+    // &::-webkit-scrollbar {
+    //     width: 8px;
+    //     // height: 12px;
+    //     background: #f4f4f4;
+    // }
+
+    // &::-webkit-scrollbar-thumb {
+    //     background: #8B8B8B;
+    //     border-radius: 6px;
+
+    //     &:hover {
+    //         background: #6eccff;
+    //     }
+    // }
+
 }
 
 section {
@@ -96,5 +101,4 @@ section {
     scroll-snap-align: start;
     text-align: center;
 }
-
 </style>

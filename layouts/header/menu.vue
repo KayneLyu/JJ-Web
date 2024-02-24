@@ -13,7 +13,7 @@ const menuList = ref([
         path: '/product'
     },
     {
-        name: "金久视频",
+        name: "公司荣誉",
         path: '/video'
     },
     {
