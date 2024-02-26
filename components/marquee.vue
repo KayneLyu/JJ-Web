@@ -5,7 +5,7 @@
         <div class="marquee_content" :style="{ animationDuration: `${duration}s` }">
             <slot> </slot>
         </div>
-        <div  class="marquee_content" :style="{ animationDuration: `${duration}s` }">
+        <div class="marquee_content" :style="{ animationDuration: `${duration}s` }">
             <slot> </slot>
         </div>
     </div>
@@ -27,7 +27,12 @@ const props = defineProps({
     display: flex;
     white-space: nowrap;
     overflow: hidden;
+    cursor: pointer;
+    &:hover .marquee_content {
+        animation-play-state: paused;
+    }
 }
+
 .marquee_content {
     animation: marquee 2s linear infinite;
 }
@@ -40,5 +45,4 @@ const props = defineProps({
     100% {
         transform: translateX(-100%);
     }
-}
-</style>
+}</style>

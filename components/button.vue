@@ -16,6 +16,10 @@ const props = defineProps({
     size:{
         type: Number,
         default: 24
+    },
+    color:{
+        type: String,
+        default: '#FFF'
     }
 })
 
@@ -28,7 +32,8 @@ const props = defineProps({
             '--bga-color': toTopBg,
             '--btn-height': `${height}px`,
             '--btn-width': `${width}px`,
-            '--btn-size' : `${size}px`
+            '--btn-size' : `${size}px`,
+            '--btn-color' : color
         }">
             {{ props.text }}
         </button>
@@ -43,9 +48,9 @@ button {
     // height: 70px;
     width: var(--btn-width);
     height: var(--btn-height);
-    border: 2px solid rgb(235, 235, 235, 0.2);
+    border: 2px solid var(--btn-color);;
     border-radius: 8px;
-    color: #fff;
+    color: var(--btn-color);
     font-size: var(--btn-size);
     letter-spacing: 3px;
     background-color: rgba(255, 255, 255, 0.1);

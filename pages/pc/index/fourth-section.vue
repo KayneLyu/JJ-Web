@@ -1,9 +1,57 @@
 <script setup lang='ts'>
 import MarqueeComponent from '@/components/marquee.vue';
+import Footer from '@/layouts/footer/footer.vue';
+
+import hisense from '@/assets/images/index/logo/hi.png';
+import hifill from '@/assets/images/index/logo/hifill.png';
+import jinming from '@/assets/images/index/logo/jinming.png';
+import hbqg from '@/assets/images/index/logo/hbqg.png';
+import ztks from '@/assets/images/index/logo/ztks.png';
+import nxsy from '@/assets/images/index/logo/nxsy.png';
+
+import hq from '@/assets/images/index/logo/hq.png';
+import yinfeng from '@/assets/images/index/logo/yinfeng.png';
+import wl from '@/assets/images/index/logo/wl.png';
+import jzy from '@/assets/images/index/logo/jzy.png';
+import hs from '@/assets/images/index/logo/hs.png';
+import hn from '@/assets/images/index/logo/hn.png';
+
+import dy from '@/assets/images/index/logo/dy.png';
+import bjd from '@/assets/images/index/logo/bjd.png';
+import js from '@/assets/images/index/logo/js.png';
+import zx from '@/assets/images/index/logo/zx.png';
+import gd from '@/assets/images/index/logo/gd.png';
+import jm from '@/assets/images/index/logo/jm.png';
+
 const props = defineProps({
     section: Number
 })
+const logoList1 = [
+    hq,
+    yinfeng,
+    hn,
+    wl,
+    jzy,
+    hs
+]
+const logoList2 = [
+    hifill,
+    hisense,
+    // yinfeng,
+    jinming,
+    hbqg,
+    ztks,
+    nxsy
+]
 
+const logoList3 = [
+    dy,
+    bjd,
+    js, 
+    zx,
+    gd,
+    jm
+]
 
 </script>
 
@@ -11,36 +59,46 @@ const props = defineProps({
     <div class="fourth_section">
         <div class="title">
             <p class="title_text" :class="{ 'animate_top': props.section! >= 3 }"><span>“</span> 携手共进</p>
-            <p class="title_text title_info" :class="{ 'animate_top': props.section! >= 3 }">金久自动化，引领智能化时代潮流</p>
+            <!-- <p class="title_text title_info" :class="{ 'animate_top': props.section! >= 3 }">金久自动化，引领智能化时代潮流</p> -->
+            <p class="title_text title_info" :class="{ 'animate_top': props.section! >= 3 }">感恩有你，我们的合作伙伴，共创美好未来。</p>
         </div>
         <div class="marquee">
-            <MarqueeComponent :duration="6">
-                <div class="logo">1</div>
-                <div class="logo">2</div>
-                <div class="logo">3</div>
-                <div class="logo">3</div>
-                <div class="logo">3</div>
+            <MarqueeComponent :duration="25">
+                <div class="logo_container" v-for="(item, index) in logoList1" :key="index">
+                    <div class="logo" :style="{ backgroundImage: `url(${item})` }"></div>
+                </div>
+            </MarqueeComponent>
+            <MarqueeComponent :duration="40">
+                <div class="logo_container" v-for="(item, index) in logoList2" :key="index">
+                    <div class="logo" :style="{ backgroundImage: `url(${item})` }"></div>
+                </div>
+            </MarqueeComponent>
+            <MarqueeComponent :duration="25">
+                <div class="logo_container" v-for="(item, index) in logoList3" :key="index">
+                    <div class="logo" :style="{ backgroundImage: `url(${item})` }"></div>
+                </div>
             </MarqueeComponent>
         </div>
+
+        <Footer />
     </div>
 </template>
 
 <style scoped lang="less">
 .fourth_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #ebedf0;
-    // background-image: url('@/assets/images/index/index-point.png');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: 100% 10%;
 }
 
 .title {
     margin-top: 13vh;
-    height: 500px;
+    // height: 200px;
 
     .title_text {
         text-align: left;
@@ -68,21 +126,32 @@ const props = defineProps({
     }
 }
 
-.logo {
+.logo_container {
     display: inline-block;
     margin: 10px;
     width: 200px;
     height: 100px;
-    // background-color: red;
-    background-image: url('@/assets/images/index/kk.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 20px 20px;
+    box-sizing: border-box;
     background-color: #fff;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    background-position: center;
 }
 
 .marquee {
     margin: 0 auto;
-    width: 800px;
+    margin-top: 50px;
+    max-width: 1200px;
+    min-width: 500px;
     position: relative;
 
     &::before {
