@@ -49,7 +49,7 @@ onMounted(() => {
         <section class="section_index observer_item" dataIndex=1>
             <PageFirst :section='sectionIndex' />
         </section>
-        <section class="observer_item" dataIndex=2>
+        <section id="product" class="observer_item" dataIndex=2>
             <PageSecond :section='sectionIndex' />
         </section>
         <section class="observer_item" dataIndex=3>
@@ -100,5 +100,6 @@ section {
     height: 100vh;
     scroll-snap-align: start;
     text-align: center;
+    overflow: hidden;
 }
 </style>

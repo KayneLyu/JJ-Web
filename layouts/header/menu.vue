@@ -14,7 +14,7 @@ const menuList = ref([
     },
     {
         name: "公司荣誉",
-        path: '/video'
+        path: '/honor'
     },
     {
         name: "产品案例",

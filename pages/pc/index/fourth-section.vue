@@ -37,7 +37,6 @@ const logoList1 = [
 const logoList2 = [
     hifill,
     hisense,
-    // yinfeng,
     jinming,
     hbqg,
     ztks,
@@ -58,9 +57,9 @@ const logoList3 = [
 <template>
     <div class="fourth_section">
         <div class="title">
-            <p class="title_text" :class="{ 'animate_top': props.section! >= 3 }"><span>“</span> 携手共进</p>
+            <p class="title_text" :class="{ 'animate_left': props.section! >= 4 }"><span>“</span> 携手共进</p>
             <!-- <p class="title_text title_info" :class="{ 'animate_top': props.section! >= 3 }">金久自动化，引领智能化时代潮流</p> -->
-            <p class="title_text title_info" :class="{ 'animate_top': props.section! >= 3 }">感恩有你，我们的合作伙伴，共创美好未来。</p>
+            <p class="title_text title_info" :class="{ 'animate_top': props.section! >= 4 }">感恩有你，我们的合作伙伴，共创美好未来。</p>
         </div>
         <div class="marquee">
             <MarqueeComponent :duration="25">
@@ -80,7 +79,9 @@ const logoList3 = [
             </MarqueeComponent>
         </div>
 
-        <Footer />
+        <div class="footer_container">
+            <Footer />
+        </div>
     </div>
 </template>
 
@@ -91,8 +92,6 @@ const logoList3 = [
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     background-color: #ebedf0;
 }
 
@@ -148,15 +147,13 @@ const logoList3 = [
 }
 
 .marquee {
+    position: relative;
     margin: 0 auto;
-    margin-top: 50px;
     max-width: 1200px;
     min-width: 500px;
-    position: relative;
-
     &::before {
         content: "";
-        height: 120%;
+        height: 100%;
         left: -15px;
         position: absolute;
         top: -10px;
@@ -168,7 +165,7 @@ const logoList3 = [
 
     &::after {
         content: "";
-        height: 120%;
+        height: 100%;
         right: -15px;
         position: absolute;
         top: -10px;
@@ -178,4 +175,33 @@ const logoList3 = [
 
     }
 }
+
+.animate_left {
+    animation: from_left 1s linear;
+}
+.animate_top {
+    animation: from_bottom 1s linear;
+}
+
+@keyframes from_left {
+    0% {
+        opacity: 0.1;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes from_bottom {
+    0% {
+        opacity: 0.1;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 </style>
