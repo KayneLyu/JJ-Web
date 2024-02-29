@@ -10,10 +10,10 @@ type IntersectionObserverCallback = (
     observer: IntersectionObserver
 ) => void;
 
-// import 'animate.css'
-// definePageMeta({
-//     layout: 'custom',
-// })
+definePageMeta({
+    layout: 'custom',
+})
+
 const scrollRef = ref<HTMLElement | null>(null)
 const sectionIndex = ref(0)
 
@@ -74,25 +74,6 @@ onMounted(() => {
     scroll-snap-type: y mandatory;
     scroll-behavior: auto;
     scrollbar-width: thin;
-    // scrollbar-color: #1D1F86;
-
-
-
-    // &::-webkit-scrollbar {
-    //     width: 8px;
-    //     // height: 12px;
-    //     background: #f4f4f4;
-    // }
-
-    // &::-webkit-scrollbar-thumb {
-    //     background: #8B8B8B;
-    //     border-radius: 6px;
-
-    //     &:hover {
-    //         background: #6eccff;
-    //     }
-    // }
-
 }
 
 section {

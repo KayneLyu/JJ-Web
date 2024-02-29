@@ -1,8 +1,10 @@
 <script setup>
+import Header from './header/index';
 </script>
 
 <template>
-    <div>
-       <slot />
-    </div>
- </template>
+   <div>
+      <Header />
+      <slot />
+   </div>
+</template>

@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import MarqueeComponent from '@/components/marquee.vue';
-import Footer from '@/layouts/footer/footer.vue';
+import Footer from '@/layouts/footer/index.vue';
 
 import hisense from '@/assets/images/index/logo/hi.png';
 import hifill from '@/assets/images/index/logo/hifill.png';
@@ -180,13 +180,13 @@ const logoList3 = [
     animation: from_left 1s linear;
 }
 .animate_top {
-    animation: from_bottom 1s linear;
+    animation: from_bottom 1.3s linear;
 }
 
 @keyframes from_left {
     0% {
         opacity: 0.1;
-        transform: translateX(-100px);
+        transform: translateX(-400px);
     }
     100% {
         opacity: 1;
@@ -196,7 +196,7 @@ const logoList3 = [
 @keyframes from_bottom {
     0% {
         opacity: 0.1;
-        transform: translateY(100px);
+        transform: translateY(200px);
     }
     100% {
         opacity: 1;

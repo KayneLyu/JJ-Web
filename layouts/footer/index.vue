@@ -6,14 +6,14 @@ import QRcode from '@/assets/images/index/wechat_qrcode.png';
    <div class="footer_container">
       <div class="content">
          <div class="title">
-            产品导航
+            网站导航
          </div>
          <div class="content_item">
             <NuxtLink to="/">网站首页</NuxtLink>
             <NuxtLink to="/about">关于我们</NuxtLink>
             <NuxtLink to="/product">产品中心</NuxtLink>
             <NuxtLink to="/honor">公司荣誉</NuxtLink>
-            <NuxtLink to="/example">产品案例</NuxtLink>
+            <NuxtLink to="/precedent">产品案例</NuxtLink>
             <NuxtLink to="/contact">联系我们</NuxtLink>
          </div>
       </div>
@@ -26,7 +26,7 @@ import QRcode from '@/assets/images/index/wechat_qrcode.png';
                <i>
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
                      <path fill="currentColor"
-                        d="M368 0h-224c-26.4 0-48 21.6-48 48v416c0 26.4 21.6 48 48 48h224c26.4 0 48-21.6 48-48v-416c0-26.4-21.6-48-48-48zM192 24h128v16h-128v-16zM256 480c-17.673 0-32-14.327-32-32s14.327-32 32-32 32 14.327 32 32-14.327 32-32 32zM384 384h-256v-320h256v320z">
+                        d="M384 0h-288c-17.6 0-32 14.399-32 32v448c0 17.6 14.399 32 32 32h288c17.6 0 32-14.4 32-32v-448c0-17.601-14.4-32-32-32zM240 488.891c-13.746 0-24.891-11.145-24.891-24.891s11.145-24.891 24.891-24.891 24.891 11.145 24.891 24.891-11.145 24.891-24.891 24.891zM384 416h-288v-352h288v352z">
                      </path>
                   </svg>
                </i>
