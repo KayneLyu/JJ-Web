@@ -9,8 +9,6 @@ export const useDeviceType = () => {
 
     const type = ref<'mobile' | 'pc'>('pc')
 
-    console.log(UA)
-
     // 通过 UA 来判断设备类型是 pc 还是 mobile
     if (/(Android|webOS|iPhone|iPod|tablet|BlackBerry|Mobile)/i.test(UA))
         type.value = 'mobile'

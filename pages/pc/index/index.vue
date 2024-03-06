@@ -36,7 +36,6 @@ onMounted(() => {
     }
     const observer = new IntersectionObserver(callback, options);
     elements.forEach(ele => {
-        // ele.classList.add('opaque')
         observer.observe(ele);
     })
 })

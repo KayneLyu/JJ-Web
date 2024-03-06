@@ -81,7 +81,7 @@ import QRcode from '@/assets/images/index/wechat_qrcode.png';
    justify-content: space-between;
    box-sizing: border-box;
    padding: 50px 22vw 0;
-   width: 100vw;
+   width: 100%;
    height: 350px;
    background-color: #1D1F86;
 }

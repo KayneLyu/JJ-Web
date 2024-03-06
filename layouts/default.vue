@@ -20,10 +20,7 @@ import Footer from './footer/index';
    flex-direction: column;
    justify-content: space-between;
    width: 100%;
-   height: 100vh;
+   min-height: 100vh;
 }
-.layout_footer {
-   margin-top: 500px;
-   // position: absolute;
-}
+
 </style>
