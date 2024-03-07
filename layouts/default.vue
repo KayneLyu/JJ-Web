@@ -4,23 +4,31 @@ import Footer from './footer/index';
 </script>
 
 <template>
-   <div class="layout">
+   <div>
       <Header />
-      <slot />
+      <div class="layout_content">
 
-      <div class="layout_footer">
-         <Footer />
+         <div class="layout_footer">
+            <slot />
+
+            <Footer />
+         </div>
       </div>
    </div>
 </template>
 
 <style scoped lang="less">
-.layout {
+.layout_content {
+   overflow: auto;
+   height: 100vh;
+   scrollbar-width: thin;
+}
+
+.layout_footer {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   width: 100%;
+   margin-top: auto;
    min-height: 100vh;
 }
-
 </style>

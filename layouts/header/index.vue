@@ -8,7 +8,6 @@ import logo from '@/assets/images/logo/logo.png';
     <div class="header_content">
         <div class="logo">
             <img :src="logo" alt="金久数控">
-
         </div>
         <div class="header_menu">
             <Menu></Menu>
@@ -17,7 +16,7 @@ import logo from '@/assets/images/logo/logo.png';
     <!-- </div> -->
 </template>
 
-<style scoped>
+<style scoped lang="less">
 .header_content {
     position: fixed;
     top: 0;
