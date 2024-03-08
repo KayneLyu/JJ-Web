@@ -20,7 +20,13 @@ export default defineNuxtConfig({
           content: "金久,东莞金久,东莞市金久,金久自动化,金久塑控,风环,自动风环,全自动控制风环,称重,称重喂料,称重控制,边料机,塑料薄膜,塑胶行业,测厚仪,薄膜测厚系统",
         }
       ],
-      link: []
+      link: [],
+      script: [
+        {
+          type:'text/javascript',
+          src:'https://webapi.amap.com/maps?v=2.0&key=304d08b1edca59c3c1f022a9063f0e67'
+        }
+      ]
     }
   },
   vite: {

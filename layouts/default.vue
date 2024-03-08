@@ -8,10 +8,12 @@ import Footer from './footer/index';
       <Header />
       <div class="layout_content">
 
-         <div class="layout_footer">
+         <div class="layout_pages">
             <slot />
 
-            <Footer />
+            <div class="footer_container">
+               <Footer />
+            </div>
          </div>
       </div>
    </div>
@@ -24,11 +26,13 @@ import Footer from './footer/index';
    scrollbar-width: thin;
 }
 
-.layout_footer {
+.layout_pages {
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
-   margin-top: auto;
    min-height: 100vh;
+}
+
+.footer_container {
+   margin-top: auto;
 }
 </style>
