@@ -95,10 +95,10 @@
 import mini from '@/assets/images/logo/mini.png';
 declare let AMap: any;
 
-let map: any = null
+let map:any = shallowRef(null)
 // 加载地图文件
 onMounted(() => {
-  let map = new AMap.Map('container', {
+  map.value = new AMap.Map('container', {
     zoom: 17.3,
     center: [113.697378, 23.02478]
   });
@@ -118,12 +118,12 @@ onMounted(() => {
     position: [113.696936, 23.02385], // 位置
     icon: mini
   })
-
-  map.add([marker,circle])
+  map.value?.add([marker, circle])
 })
 
 onUnmounted(() => {
-  map?.destroy();
+  console.log('销毁map');
+  map.value?.destroy();
 });
 </script>
 
@@ -134,6 +134,7 @@ onUnmounted(() => {
   height: 300px;
   background-size: cover;
   background-image: url('@/assets/images/contact/contact.webp');
+
   p {
     max-width: 350px;
     text-align: center;
@@ -175,18 +176,22 @@ onUnmounted(() => {
       width: fit-content;
       cursor: pointer;
       text-wrap: nowrap;
+
       i {
         vertical-align: middle;
       }
     }
   }
+
   .map_container {
     width: 40%;
     height: 650px;
+
     h1 {
       text-align: center;
     }
   }
+
   #container {
     margin-top: 30px;
     width: 100%;
@@ -196,9 +201,9 @@ onUnmounted(() => {
     border-radius: 20px;
   }
 }
+
 .title {
   margin-top: 50px;
   width: 100%;
   text-align: center;
-}
-</style>
+}</style>
