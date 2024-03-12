@@ -85,52 +85,18 @@
     </div>
     <div class="map_container">
       <h1>公司位置</h1>
-      <ClientOnly>
-        <div id="container"></div>
-      </ClientOnly>
+      <div class="map">
+        <ClientOnly>
+          <MapComponent />
+        </ClientOnly>
+      </div>
     </div>
 
   </div>
 </template>
 
 <script lang="ts" setup>
-import mini from '@/assets/images/logo/mini.png';
-declare let AMap: any;
-
-let map:any = shallowRef(null)
-// 加载地图文件
-onMounted(() => {
-  map.value = new AMap.Map('container', {
-    zoom: 17.3,
-    center: [113.697378, 23.02478]
-  });
-
-
-  var circle = new AMap.Circle({
-    center: new AMap.LngLat("113.696936", "23.02385"), //圆心位置
-    radius: 5, //半径 单位:米
-    strokeColor: "#FF0012", //线颜色
-    strokeOpacity: 1, //线透明度
-    strokeWeight: 3, //线粗细度
-    fillColor: "#FF0012", //填充颜色
-    fillOpacity: 0.5, //填充透明度
-  });
-  let marker = new AMap.Marker({
-    title: '东莞市金久自动化科技有限公司',
-    position: [113.696936, 23.02385], // 位置
-    icon: mini
-  })
-  map.value?.add([marker, circle])
-})
-
-const destroyMap = () => { 
-  map.value?.destroy()
-}
-
-onUnmounted(() => {
-  console.log('销毁map2');
-  destroyMap()
-});
+import MapComponent from './map.vue';
 
 </script>
 
@@ -192,20 +158,11 @@ onUnmounted(() => {
 
   .map_container {
     width: 40%;
-    height: 650px;
+    height: 600px;
 
     h1 {
       text-align: center;
     }
-  }
-
-  #container {
-    margin-top: 30px;
-    width: 100%;
-    min-width: 600px;
-    height: 600px;
-    background-color: #fff;
-    border-radius: 20px;
   }
 }
 
@@ -213,4 +170,6 @@ onUnmounted(() => {
   margin-top: 50px;
   width: 100%;
   text-align: center;
-}</style>
+}
+
+</style>
