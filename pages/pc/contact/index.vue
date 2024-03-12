@@ -85,7 +85,9 @@
     </div>
     <div class="map_container">
       <h1>公司位置</h1>
-      <div id="container"></div>
+      <ClientOnly>
+        <div id="container"></div>
+      </ClientOnly>
     </div>
 
   </div>
@@ -121,10 +123,15 @@ onMounted(() => {
   map.value?.add([marker, circle])
 })
 
+const destroyMap = () => { 
+  map.value?.destroy()
+}
+
 onUnmounted(() => {
-  console.log('销毁map');
-  map.value?.destroy();
+  console.log('销毁map2');
+  destroyMap()
 });
+
 </script>
 
 <style lang="less" scoped>
