@@ -26,7 +26,11 @@ import cz from '@/assets/images/index/cz6.png';
 const productList = ref([
   {
     image: cz,
-    name: '称重配料'
+    name: '自动风环（风量）'
+  },
+  {
+    image: cz,
+    name: '自动风环（风温）'
   },
   {
     image: cz,
@@ -34,19 +38,15 @@ const productList = ref([
   },
   {
     image: cz,
-    name: '称重配料'
+    name: '单失重'
   },
   {
     image: cz,
-    name: '称重配料'
+    name: '边料回收'
   },
   {
     image: cz,
-    name: '称重配料'
-  },
-  {
-    image: cz,
-    name: '称重配料'
+    name: '中央供料'
   },
 ])
 

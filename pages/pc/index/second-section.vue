@@ -7,12 +7,17 @@ import cz6 from '@/assets/images/index/cz6.png';
 
 const productList = ref([
     {
-        name: '自动风环',
+        name: '自动风环（风量）',
         info: '',
         src: airRing
     },
     {
-        name: '称重配料',
+        name: '自动风环（风温）',
+        info: '',
+        src: airRing
+    },
+    {
+        name: '沉重配料',
         info: '',
         src: cz6
     },
@@ -28,11 +33,6 @@ const productList = ref([
     },
     {
         name: '中央供料',
-        info: '',
-        src: airRing
-    },
-    {
-        name: '冷却系统',
         info: '',
         src: airRing
     },

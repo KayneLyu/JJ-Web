@@ -20,7 +20,17 @@
             </path>
           </svg>
         </i>
-        黎经理： 18888888888
+        吕经理： 18607691396
+      </p>
+      <p>
+        <i>
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+            <path fill="currentColor"
+              d="M384 0h-288c-17.6 0-32 14.399-32 32v448c0 17.6 14.399 32 32 32h288c17.6 0 32-14.4 32-32v-448c0-17.601-14.4-32-32-32zM240 488.891c-13.746 0-24.891-11.145-24.891-24.891s11.145-24.891 24.891-24.891 24.891 11.145 24.891 24.891-11.145 24.891-24.891 24.891zM384 416h-288v-352h288v352z">
+            </path>
+          </svg>
+        </i>
+        黎经理： 13712627702
       </p>
       <p>
         <i>
@@ -31,16 +41,6 @@
           </svg>
         </i>
         蒋经理： 18888888888
-      </p>
-      <p>
-        <i>
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
-            <path fill="currentColor"
-              d="M384 0h-288c-17.6 0-32 14.399-32 32v448c0 17.6 14.399 32 32 32h288c17.6 0 32-14.4 32-32v-448c0-17.601-14.4-32-32-32zM240 488.891c-13.746 0-24.891-11.145-24.891-24.891s11.145-24.891 24.891-24.891 24.891 11.145 24.891 24.891-11.145 24.891-24.891 24.891zM384 416h-288v-352h288v352z">
-            </path>
-          </svg>
-        </i>
-        吕经理： 18888888888
       </p>
       <p>
         <i>
@@ -60,7 +60,7 @@
             </path>
           </svg>
         </i>
-        邮 箱：exam@jjsk.com
+        邮 箱：jinjiu@dgjjsk.com
       </p>
       <p>
         <i>
@@ -142,8 +142,9 @@ import MapComponent from './map.vue';
 
     p {
       font-size: 22px;
-      height: 80px;
-      line-height: 120px;
+      margin: 50px 0;
+      // height: 80px;
+      // line-height: 120px;
       letter-spacing: 3px;
       border-bottom: 1px solid #8e8e8e;
       width: fit-content;
@@ -159,7 +160,6 @@ import MapComponent from './map.vue';
   .map_container {
     width: 40%;
     height: 600px;
-
     h1 {
       text-align: center;
     }

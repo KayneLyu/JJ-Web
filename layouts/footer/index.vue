@@ -30,7 +30,7 @@ import QRcode from '@/assets/images/index/wechat_qrcode.png';
                      </path>
                   </svg>
                </i>
-               张经理：13688888888
+               吕经理：18607691396
             </p>
             <p>
                <i>
@@ -50,7 +50,7 @@ import QRcode from '@/assets/images/index/wechat_qrcode.png';
                      </path>
                   </svg>
                </i>
-               邮 {{ '&nbsp;&nbsp;' }}箱：exam@jjsk.com
+               邮 {{ '&nbsp;&nbsp;' }}箱：jinjiu@dgjjsk.com
             </p>
             <p>
                <i>
@@ -80,9 +80,8 @@ import QRcode from '@/assets/images/index/wechat_qrcode.png';
    display: flex;
    justify-content: space-between;
    box-sizing: border-box;
-   padding: 50px 22vw 0;
+   padding: 30px 22vw 10px;
    width: 100%;
-   height: 350px;
    background-color: #1D1F86;
 }
 
