@@ -4,6 +4,7 @@ import Button from '@/components/button.vue';
 import airRing from "@/assets/images/index/air_ring.png";
 import singleMixin from "@/assets/images/index/dsz.png";
 import cz6 from '@/assets/images/index/cz6.png';
+import airHot from '@/assets/images/index/air_hot.png';
 
 const productList = ref([
     {
@@ -14,10 +15,10 @@ const productList = ref([
     {
         name: '自动风环（风温）',
         info: '',
-        src: airRing
+        src: airHot
     },
     {
-        name: '沉重配料',
+        name: '称重配料',
         info: '',
         src: cz6
     },

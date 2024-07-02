@@ -105,11 +105,11 @@ import QRcode from '@/assets/images/index/wechat_qrcode.png';
       p {
          text-decoration: none;
          cursor: pointer;
-         color: #cdcdcd;
+         color: #e0e0e0;
          letter-spacing: 3px;
          margin-right: 35px;
          margin-bottom: 10px;
-         font-size: 20px;
+         font-size: 16px;
 
          &:hover {
             color: #fff !important;

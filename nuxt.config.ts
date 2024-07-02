@@ -23,8 +23,8 @@ export default defineNuxtConfig({
       link: [],
       script: [
         {
-          type:'text/javascript',
-          src:'https://webapi.amap.com/maps?v=2.0&key=304d08b1edca59c3c1f022a9063f0e67'
+          type: 'text/javascript',
+          src: 'https://webapi.amap.com/maps?v=2.0&key=304d08b1edca59c3c1f022a9063f0e67'
         }
       ]
     }

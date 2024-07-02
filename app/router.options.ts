@@ -10,7 +10,7 @@ export default <RouterConfig> {
     
     // 当前设备的类型
     const targetType = useDeviceType().value
-    console.log('ssssssss', targetType);
+    console.log('device type', targetType);
     
     // 不是当前设备类型的另一个类型
     const notTargetType = targetType === 'mobile' ? 'pc' : 'mobile'
