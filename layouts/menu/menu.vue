@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 const menuList = [
     {
         name: "金久首页",
@@ -55,7 +56,6 @@ const mouseLeave = () => {
 }
 
 </script>
-
 
 <template>
     <ul id="nav">

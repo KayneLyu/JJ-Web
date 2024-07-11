@@ -65,7 +65,6 @@ export const getMark = () => {
         } else {
             document.body.appendChild(div);
         }
-
         return id;
     };
 
@@ -92,7 +91,6 @@ export const getMark = () => {
         else {
             observer.observe(container, { box: "content-box" });
         }
-
         // 组件销毁时清除监听
         onBeforeUnmount(() => {
             observer.disconnect();

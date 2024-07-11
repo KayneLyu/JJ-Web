@@ -163,8 +163,8 @@ import bg from '@/assets/images/about/bg.webp';
   ul {
     display: flex;
     margin: 0 auto;
-    margin-top: 120px;
-    width: 50%;
+    margin-top: 80px;
+    width: 50vw;
     justify-content: center;
     box-sizing: border-box;
     padding: 0 50px;
@@ -175,7 +175,7 @@ import bg from '@/assets/images/about/bg.webp';
     }
 
     li {
-      width: 33%;
+      width: 30%;
       padding: 0 60px;
       color: #fff;
       margin: 60px 0;

@@ -1,13 +1,12 @@
 <template>
     <div class="introduce">
         <div class="title">
-            {{ productList[name].name }}
+            {{ getInfoFromProps().name }}
         </div>
         <div class="content">
-            <img :src="productList[name].image" alt=""></img>
+            <img :src="getInfoFromProps().image" alt="" />
             <div class="text_box"></div>
         </div>
-
     </div>
 </template>
 
@@ -18,8 +17,10 @@ import airRing from "@/assets/images/index/air_ring.png";
 import singleMixin from "@/assets/images/index/dsz.png";
 import airHot from '@/assets/images/index/air_hot.png';
 
+type IProductName = string | null
+
 const route = useRoute()
-const name = route.query.product//拿到传递参数 
+const name = (route.query.product) as IProductName//拿到传递参数 
 
 const productList = {
     'air_ring_wind': {
@@ -45,8 +46,16 @@ const productList = {
     'center_provide': {
         image: airRing,
         name: '中央供料',
-    },
+    }
 }
+
+const getInfoFromProps = () => {
+    if (!name || typeof (name) == 'string') {
+        return productList.air_ring_temp
+    }
+    return productList[name]
+}
+
 </script>
 
 <style scoped lang="less">
@@ -54,24 +63,27 @@ const productList = {
     width: 50vw;
     margin: 0 auto;
 }
+
 .title {
     margin-top: 150px;
     font-size: 40px;
     font-weight: 700;
 }
+
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+
     img {
         width: 500px;
         height: 500px;
         object-fit: contain;
     }
+
     .text_box {
         width: 500px;
         height: 800px;
     }
-}
-</style>
+}</style>
