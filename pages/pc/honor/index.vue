@@ -74,7 +74,7 @@ const goIntroduce =(name: string) => {
 <style lang="less" scoped>
 header {
   width: 100%;
-  height: 370px;
+  height: 300px;
 }
 
 .header_bg {

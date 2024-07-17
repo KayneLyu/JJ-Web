@@ -11,7 +11,7 @@ type IntersectionObserverCallback = (
 ) => void;
 
 definePageMeta({
-    layout: 'custom',
+    layout: 'default',
 })
 
 const scrollRef = ref<HTMLElement | null>(null)

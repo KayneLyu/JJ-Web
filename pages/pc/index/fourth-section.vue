@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import MarqueeComponent from '@/components/marquee.vue';
-import Footer from '@/layouts/footer/index.vue';
+import Footer from '@/layouts/PC/footer/index.vue';
 
 import hisense from '@/assets/images/index/logo/hi.png';
 import hifill from '@/assets/images/index/logo/hifill.png';

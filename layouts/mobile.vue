@@ -1,5 +1,5 @@
 <script setup>
-import Header from './header/index';
+import Header from './Mobile/header/index';
 </script>
 
 <template>

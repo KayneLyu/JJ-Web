@@ -49,7 +49,7 @@ onUnmounted(() => {
     margin-left: 20px;
     width: 100%;
     min-width: 600px;
-    height: 600px;
+    height: 500px;
     background-color: #fff;
     border-radius: 20px;
 }

@@ -125,23 +125,22 @@ import MapComponent from './map.vue';
 .content {
   display: flex;
   justify-content: center;
-  margin: 100px 0;
-  width: 100%;
-  min-width: 1000px;
+  margin: 100px auto;
+  width: 1000px;
 
   // height: 700px;
   .compony_info {
-    width: 30%;
     height: 650px;
     box-sizing: border-box;
-
+    margin-right: 20px;
     h1 {
+      font-size: 22px;
       width: 100%;
       margin-bottom: 30px;
     }
 
     p {
-      font-size: 22px;
+      font-size: 18px;
       margin: 50px 0;
       // height: 80px;
       // line-height: 120px;
@@ -158,9 +157,9 @@ import MapComponent from './map.vue';
   }
 
   .map_container {
-    width: 40%;
-    height: 600px;
+    height: 500px;
     h1 {
+      font-size: 22px;
       text-align: center;
     }
   }

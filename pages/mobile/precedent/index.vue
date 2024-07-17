@@ -5,7 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-
+definePageMeta({
+  layout: 'mobile',
+})
 </script>
 
 <style>

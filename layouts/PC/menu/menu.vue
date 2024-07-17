@@ -37,11 +37,6 @@ watch(() => route.path, (newVal,oldVal) => {
     const itemIndex = menuList.findIndex(item => {
         return newVal == item.path
     })
-    console.log(newVal,oldVal,itemIndex);
-    
-    if(itemIndex == -1) {
-        return
-    }
     myRef.value!.style['left'] = itemIndex * 124 + 30 + 'px'
     menuIndex.value = itemIndex
 })

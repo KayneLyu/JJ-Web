@@ -5,9 +5,13 @@
 </template>
 
 <script lang="ts" setup>
-
+definePageMeta({
+  layout: 'mobile',
+})
 </script>
 
-<style>
-
+<style scoped>
+div {
+  margin-top: 70px;
+}
 </style>

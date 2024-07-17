@@ -1,6 +1,8 @@
 <script setup>
-import Header from './header/index';
-import Footer from './footer/index';
+import Header from './PC/header/index';
+import Footer from './PC/footer/index';
+const route = useRoute()
+
 </script>
 
 <template>
@@ -11,7 +13,7 @@ import Footer from './footer/index';
          <div class="layout_pages">
             <slot />
 
-            <div class="footer_container">
+            <div v-if=" route.path!=='/' " class="footer_container">
                <Footer />
             </div>
          </div>
@@ -34,5 +36,6 @@ import Footer from './footer/index';
 
 .footer_container {
    margin-top: auto;
+   overflow: hidden;
 }
 </style>
