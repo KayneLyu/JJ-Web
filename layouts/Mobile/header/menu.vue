@@ -1,11 +1,10 @@
 <template>
     <div class="menu_container">
-        <div class="menu"></div>
-        <p @click="isShow = !isShow">菜单</p>
-        <div class="menu_card" :style="{ height: isShow ? '300px' : 0 }">
+        <div @click="isShow = !isShow" class="menu" :class= "{ menuToggle: isShow}"></div>
+        <div class="menu_card" :style="{ height: isShow ? '310px' : 0 }">
             <ul id="nav">
                 <li v-for="(item, index ) in menuList" :key="index">
-                    <NuxtLink :to="item.path" @click="isShow = !isShow">
+                    <NuxtLink active-class="menu_active" :to="item.path" @click="isShow = !isShow">
                         {{ item.name }}</NuxtLink>
                 </li>
             </ul>
@@ -47,28 +46,33 @@ const menuList = [
 .menu_container {
     position: relative;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .menu_card {
     position: absolute;
     overflow: hidden;
-    top: 70px;
+    top: 65px;
     right: 0;
     height: 0;
     width: 100vw;
-    background-color: pink;
-    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease;
 }
 
+.menu_active {
+    color: rgb(0, 51, 255)!important;;
+}
 #nav {
     width: 100%;
     height: 100%;
-
+    
     li {
         text-align: left;
         width: 100%;
         height: 50px;
-
+        border-bottom: 1px solid #dfdfdf;
         a {
             display: flex;
             align-items: center;
@@ -88,45 +92,46 @@ const menuList = [
 
 
 .menu {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    margin-top: 20px;
     position: relative;
+    width: 40px;
+    height:35px;
+    margin-right: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
 }
 
 .menu:before,
 .menu:after {
     content: "";
     display: block;
-    width: 100px;
-    height: 16px;
+    width: 20px;
+    height: 1px;
     background: #000;
     border-radius: 8px;
     position: absolute;
-    left: 0;
-    -webkit-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
+    left: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .menu:before {
-    top: 5px;
-    box-shadow: 0 37px #000;
+    top: 12px;
+    box-shadow: 0 6px #000;
 }
 
 .menu:after {
-    bottom: 5px;
+    top:24px;
 }
 
-.menu:hover:before {
-    top: 42px;
+.menuToggle:before {
+    top: 18px;
     box-shadow: none;
-    -webkit-transform: rotate(225deg);
-    transform: rotate(225deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
-.menu:hover:after {
-    bottom: 42px;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+.menuToggle:after {
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }</style>

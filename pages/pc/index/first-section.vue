@@ -30,10 +30,6 @@ const props = defineProps({
             <source :src="indexVideo" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
-        <!-- <img :src="fh1" alt="风环">
-            <img :src="cz6" alt="风环">
-            <img :src="fh2" alt="风环"> -->
     </div>
 </template>
 
