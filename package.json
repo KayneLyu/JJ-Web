@@ -15,5 +15,7 @@
     "vue": "^3.4.5",
     "vue-router": "^4.2.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^11.1.5"
+  }
 }
