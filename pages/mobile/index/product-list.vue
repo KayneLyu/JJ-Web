@@ -19,9 +19,12 @@
 
 <script setup lang='ts' >
 import airRing from "@/assets/images/index/air_ring.png";
-import singleMixin from "@/assets/images/index/dsz.png";
+import singleMixin from "@/assets/images/index/dsz.webp";
 import cz6 from '@/assets/images/index/cz6.png';
 import airHot from '@/assets/images/index/air_hot.png';
+import reclaim from '@/assets/images/index/bian.webp';
+import center from '@/assets/images/index/center.webp';
+
 
 const productList = ref([
     {
@@ -47,12 +50,12 @@ const productList = ref([
     {
         name: '边料回收',
         info: '',
-        src: airRing
+        src: reclaim
     },
     {
         name: '中央供料',
         info: '',
-        src: airRing
+        src: center
     },
 ])
 </script>

@@ -23,8 +23,10 @@
 <script lang="ts" setup>
 import cz from '@/assets/images/index/cz6.png';
 import airRing from "@/assets/images/index/air_ring.png";
-import singleMixin from "@/assets/images/index/dsz.png";
+import singleMixin from "@/assets/images/index/dsz.webp";
 import airHot from '@/assets/images/index/air_hot.png';
+import Reclaim from '@/assets/images/index/bian.webp';
+import center from '@/assets/images/index/center.webp';
 
 const productList = ref([
   {
@@ -48,12 +50,12 @@ const productList = ref([
     product: 'weight_dsz'
   },
   {
-    image: cz,
+    image: Reclaim,
     name: '边料回收',
     product: 'side_recovery'
   },
   {
-    image: cz,
+    image: center,
     name: '中央供料',
     product: 'center_provide'
   },

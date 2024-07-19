@@ -12,7 +12,7 @@
             <ul class="show_number">
                 <li v-for="(item, index) in source" :key="index">
                     <div class="number">
-                        <StaticNumber :startValue="0" :endValue="item.number" :duration="3000" />
+                        <StaticNumber :size="26" :startValue="0" :endValue="item.number" :duration="3000" />
                         <p> + </p>
                     </div>
                     <p class="text">
@@ -29,19 +29,19 @@ import StaticNumber from '@/components/static-number.vue';
 
 const source = ref([
     {
-        number: 20,
+        number: 10,
         text: '从业经验（年）'
     },
     {
-        number: 30,
+        number: 20,
         text: '研发、技术团队（人）'
     },
     {
-        number: 25,
+        number: 20,
         text: '国家专利证书（项）'
     },
     {
-        number: 1000,
+        number: 100,
         text: '客户选择我们'
     },
 ])
@@ -69,6 +69,7 @@ const source = ref([
     display: flex;
     text-align: center;
     justify-content: center;
+    margin: 10px 0;
 
     p {
         color: #fff;

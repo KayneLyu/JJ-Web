@@ -28,19 +28,19 @@ watch(() => props.section, (newValue) => {
     if (newValue == 3) {
         source.value = [
             {
-                number: 20,
+                number: 10,
                 text: '从业经验（年）'
             },
             {
-                number: 30,
+                number: 20,
                 text: '研发、技术团队（人）'
             },
             {
-                number: 25,
+                number: 20,
                 text: '国家专利证书（项）'
             },
             {
-                number: 1000,
+                number: 100,
                 text: '客户选择我们'
             },
         ]
@@ -198,4 +198,5 @@ ul {
         opacity: 1;
         transform: translateY(0);
     }
-}</style>
+}
+</style>

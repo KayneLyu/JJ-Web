@@ -1,5 +1,5 @@
 <template>
-    <div class="number-counter" >{{ displayedNumber }}</div>
+    <div class="number-counter" :style="{fontSize:size+'px',fontWeight:weight }">{{ displayedNumber }}</div>
 </template>
   
 <script lang="ts" setup>
@@ -17,6 +17,14 @@ const props = defineProps({
     duration: {
         type: Number,
         default: 1000
+    },
+    size:{
+        type: Number,
+        default: 45
+    },
+    weight:{
+        type: Number,
+        default: 700
     }
 })
 const displayedNumber = ref(props.startValue);
@@ -58,8 +66,6 @@ watch(() => props.endValue, () => {
   
 <style scoped>
 .number-counter {
-    font-size: 45px;
-    font-weight: bold;
     color: #fff;
 }
 </style>

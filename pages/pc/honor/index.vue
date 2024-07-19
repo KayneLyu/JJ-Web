@@ -10,54 +10,17 @@
 
   <div class="product_list"  >
     <ul ref="waterRef">
-      <li v-for="(item, key) in productList" :key="key">
+      <!-- <li v-for="(item, key) in productList" :key="key">
         <div class="img_container" @click="goIntroduce(item.product)">
-          <img :src="item.image" alt="">
         </div>
         <p>{{ item.name }}</p>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
 
 <script lang="ts" setup>
-import cz from '@/assets/images/index/cz6.png';
-import airRing from "@/assets/images/index/air_ring.png";
-import singleMixin from "@/assets/images/index/dsz.png";
-import airHot from '@/assets/images/index/air_hot.png';
 
-const productList = ref([
-  {
-    image: airRing,
-    name: '自动风环（风量）',
-    product: 'air_ring_wind'
-  },
-  {
-    image: airHot,
-    name: '自动风环（风温）',
-    product: 'air_ring_temp'
-  },
-  {
-    image: cz,
-    name: '称重配料',
-    product: 'weight_mkz'
-  },
-  {
-    image: singleMixin,
-    name: '单失重',
-    product: 'weight_dsz'
-  },
-  {
-    image: cz,
-    name: '边料回收',
-    product: 'side_recovery'
-  },
-  {
-    image: cz,
-    name: '中央供料',
-    product: 'center_provide'
-  },
-])
 
 const router = useRouter()
 
