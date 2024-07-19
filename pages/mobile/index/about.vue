@@ -1,7 +1,7 @@
 <template>
     <div class="about_container">
         <p class="tips_text">
-        <h1>关于我们</h1>
+            关于我们
         </p>
         <p class="about_content">
             &nbsp;&nbsp;&nbsp;&nbsp;金久始于2004，自成立以来，我们致力于提供优质的塑胶成型辅助生产设备，为客户提供一流的解决方案和服务。
@@ -26,7 +26,6 @@
 
 <script setup lang='ts' >
 import StaticNumber from '@/components/static-number.vue';
-import about from '@/assets/mobile/index/about_bg.webp';
 
 const source = ref([
     {
@@ -48,14 +47,14 @@ const source = ref([
 ])
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .tips_text {
-    h1 {
-        width: fit-content;
-        font-weight: 400;
-        margin-left: 10px;
-        border-bottom: 4px solid #8cbeff;
-    }
+    width: fit-content;
+    font-size: 34px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-left: 10px;
+    border-bottom: 4px solid #8cbeff;
 }
 
 .about_content {
@@ -101,4 +100,5 @@ const source = ref([
 
 .number {
     font-weight: 400 !important;
-}</style>
+}
+</style>

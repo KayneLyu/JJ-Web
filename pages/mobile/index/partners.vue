@@ -57,7 +57,7 @@ const logoList3 = [
 <template>
     <div class="fourth_section">
         <p class="tips_text">
-            <h1>合作伙伴</h1>
+            合作伙伴
         </p>
 
         <div class="marquee">
@@ -91,12 +91,12 @@ const logoList3 = [
 }
 
 .tips_text {
-    h1 {
-        width: fit-content;
-        font-weight: 400;
-        border-bottom: 4px solid #8cbeff;
-        margin: 40px auto;
-    }
+    font-size: 34px;
+    width: fit-content;
+    letter-spacing: 2px;
+    font-weight: 400;
+    border-bottom: 4px solid #8cbeff;
+    margin: 40px auto;
 }
 
 .logo_container {
