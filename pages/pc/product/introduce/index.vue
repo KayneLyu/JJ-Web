@@ -14,7 +14,7 @@
 import { useRoute } from 'vue-router'
 import cz from '@/assets/images/index/cz6.png';
 import airRing from "@/assets/images/index/air_ring.png";
-import singleMixin from "@/assets/images/index/dsz.png";
+import singleMixin from "@/assets/images/index/dsz.webp";
 import airHot from '@/assets/images/index/air_hot.png';
 
 type IProductName = string | null

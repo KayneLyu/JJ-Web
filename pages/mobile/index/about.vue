@@ -98,7 +98,6 @@ const source = ref([
         }
     }
 }
-
 .number {
     font-weight: 400 !important;
 }
