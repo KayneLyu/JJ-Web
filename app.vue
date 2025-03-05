@@ -1,5 +1,8 @@
 <script setup lang="ts">
-</script >
+definePageMeta({
+  redirect: 'http://jinjiumc.com'
+})
+</script>
 
 <template>
   <NuxtLayout>
@@ -21,4 +24,5 @@ html {
 
 li {
   list-style: none;
-}</style>
+}
+</style>
